@@ -24,13 +24,14 @@ void testPairToNumber(
 }
 
 void ToString() {
-    std::cout<<"Reference manual of Number to Color mapping"<<std::endl;
+    std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
+    std::cout<<" "<<"Number"<<" "<<"Major Minor"<<std::endl;
     
     int Number = 1;
     while(Number<=25){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        std::cout <<Number<<" "<<colorPair.ToString() << std::endl;
+        std::cout<<" "<<Number<<" "<<colorPair.ToString()<<std::endl;
         Number++;
     }
 }
