@@ -31,7 +31,7 @@ void ToString() {
     while(Number<=25){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        std::cout<<" "<<Number<<" "<<colorPair.ToString()<<std::endl;
+        std::cout<<" "<<Number<<"       "<<colorPair.ToString()<<std::endl;
         Number++;
     }
 }
