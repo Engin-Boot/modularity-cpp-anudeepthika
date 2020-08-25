@@ -14,7 +14,7 @@ namespace TelCoColorCoder
     };
     int numberOfMinorColors = 
         sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-    int TotalNumberOfColorPairs = numberOfMajorColors * numberOfMinorColors
+    int TotalNumberOfColorPairs = numberOfMajorColors * numberOfMinorColors;
     class ColorPair {
         private:
             MajorColor majorColor;
