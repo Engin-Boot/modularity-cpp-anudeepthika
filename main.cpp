@@ -22,7 +22,7 @@ void testPairToNumber(
 }
 
 std::string ToString() {
-    std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
+    //std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
     std::string colorPairString = "";
     int Number = 1;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
