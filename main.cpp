@@ -28,7 +28,8 @@ void ToString() {
     std::cout<<" "<<"Number"<<" "<<"Major Minor"<<std::endl;
     
     int Number = 1;
-    while(Number<=25){
+    int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
+    while(Number<=TotalNoOfColorPairs){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
         std::cout<<" "<<Number<<"      "<<colorPair.ToString()<<std::endl;
