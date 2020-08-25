@@ -1,7 +1,6 @@
 #include <iostream>
 #include <assert.h>
 #include "TeleCo_Color_Coder_file.h"
-
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
     TelCoColorCoder::MinorColor expectedMinor){
@@ -23,11 +22,11 @@ void testPairToNumber(
 }
 
 std::string ToString() {
-    std::string colorPairString = " ";
     std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
+    std::string colorPairString = "";
     int Number = 1;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
-    while(Number<=TotalNoOfColorPairs){
+    while(Number <= TotalNoOfColorPairs){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
         colorPairString += Number;
