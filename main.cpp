@@ -22,13 +22,13 @@ void testPairToNumber(
 }
 
 std::string ToString() {
-    //std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
-    std::string colorPairString = "";
+    std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
+    std::string colorPairString;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
     for(int Number = 1; Number <= TotalNoOfColorPairs; Number++){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        colorPairString += "Number";
+        colorPairString += Number;
         colorPairString += " ";
         colorPairString += colorPair.ToString();
     }
