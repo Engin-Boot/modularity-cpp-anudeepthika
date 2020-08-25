@@ -29,7 +29,7 @@ std::string ToString() {
     while(Number <= TotalNoOfColorPairs){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        colorPairString += Number;
+        colorPairString += "Number";
         colorPairString += " ";
         colorPairString += colorPair.ToString();
         Number++;
