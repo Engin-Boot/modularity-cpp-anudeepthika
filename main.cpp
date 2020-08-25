@@ -4,8 +4,7 @@
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
-    TelCoColorCoder::MinorColor expectedMinor)
-{
+    TelCoColorCoder::MinorColor expectedMinor){
     TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(pairNumber);
     std::cout << "Got pair " << colorPair.ToString() << std::endl;
@@ -23,21 +22,22 @@ void testPairToNumber(
     assert(pairNumber == expectedPairNumber);
 }
 
-void ToString() {
+std::string ToString() {
+    std::string colorPairString;
     std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
     std::cout<<" "<<"Number"<<" "<<"Major Minor"<<std::endl;
-    
     int Number = 1;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
     while(Number<=TotalNoOfColorPairs){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        std::cout<<" "<<Number<<"      "<<colorPair.ToString()<<std::endl;
+        colorPairString = Number;
+        colorPairString += " ";
+        colorPairString += colorPair.ToString();
         Number++;
     }
+    return colorPairString;
 }
-        
-
 int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
