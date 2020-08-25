@@ -23,9 +23,8 @@ void testPairToNumber(
 }
 
 std::string ToString() {
-    std::string colorPairString;
+    std::string colorPairString = " ";
     std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
-    std::cout<<" "<<"Number"<<" "<<"Major Minor"<<std::endl;
     int Number = 1;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
     while(Number<=TotalNoOfColorPairs){
