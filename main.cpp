@@ -40,6 +40,6 @@ int main() {
 
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
-    ToString();
+    std::cout<<ToString()<<std::endl;
     return 0;
 }
