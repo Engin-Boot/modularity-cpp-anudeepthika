@@ -21,16 +21,17 @@ void testPairToNumber(
     assert(pairNumber == expectedPairNumber);
 }
 
-std::string ToString() {
+std::string GetNumberToColorPairList() {
     std::cout<<"REFERENCE MANUAL OF NUMBER TO COLOR MAPPING"<<std::endl;
     std::string colorPairString;
     int TotalNoOfColorPairs = TelCoColorCoder::TotalNumberOfColorPairs;
     for(int Number = 1; Number <= TotalNoOfColorPairs; Number++){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        colorPairString += Number;
-        colorPairString += " ";
+        colorPairString += std::string to_string(Number);
+        colorPairString += " maps to ";
         colorPairString += colorPair.ToString();
+        colorPairString += " || ";
     }
     return colorPairString;
 }
@@ -40,6 +41,6 @@ int main() {
 
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
-    std::cout<<ToString()<<std::endl;
+    std::cout<<GetNumberToColorPairList()<<std::endl;
     return 0;
 }
