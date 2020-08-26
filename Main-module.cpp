@@ -28,7 +28,7 @@ std::string GetNumberToColorPairList() {
     for(int Number = 1; Number <= TotalNoOfColorPairs; Number++){
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(Number);
-        colorPairString += std::string to_string(Number);
+        colorPairString += std::to_string(Number);
         colorPairString += " maps to ";
         colorPairString += colorPair.ToString();
         colorPairString += " || ";
